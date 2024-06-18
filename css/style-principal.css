@@ -1,0 +1,133 @@
+*{margin:0;padding: 0;}
+
+:root{
+    --menu-color: #78100C;
+    --font-color-prim: #FFD7C3;
+}     
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+/* MENU///////////////////////////////////// */
+header{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--menu-color);
+    color: var(--font-color-prim);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .menu{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.menu img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+header .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    font-size: 1.2em;
+}
+header .content img{
+    width: 25px;
+    height: auto;
+    object-fit: contain;
+}
+.menu, .content div{
+    cursor: pointer;
+}
+/* ////////////////////////////////////////////////// */
+/* PRIMEIRO_CONTAINER//////////////////////////////////////// */
+main .container-title-velas{
+    width: 100%;
+    height: 20vh;
+    background-image: url(../img/velas\ background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.primero-texto{
+    width: 100%;
+    height:  60vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+.primero-texto .logo {
+    background-image: url(../img/Logo.png);
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-size: contain;
+}  
+.primero-texto .content #title{
+    color: var(--menu-color);
+    margin-bottom: 20px;
+    font-weight: 300;
+    height: auto;
+    font-size: 1.7em;
+}
+.primero-texto .content{
+    width: 50%;
+    height: 80%;
+    font-size: 1.3em;
+    text-align: left;
+    margin: 20px;
+}
+/* /////////////////////////////////////////////////////// */
+/* CARROSSEL/////////////////////////////////////////// */
+.container-carrossel{
+    width: 100%;
+    height: 60vh;
+    background-color: gray;
+}
+/* //////////////////////////////////////////////////////////////////////// */
+.container-beneficios{
+    width: 100%;
+    height: 80vh;
+    background-image: url(../img/velas-background-2.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-beneficios div{
+    width: 60%;
+    height: 80%;
+    z-index: 2;
+}
+.container-beneficios h3{
+    color: var(--menu-color);
+    z-index: 2;
+    width: 25%;
+    height: 80%;
+    font-size: 2.4em;
+}
+
+
+.container-beneficios div p{
+    color: var(--font-color-prim);
+    
+    text-align: left;
+    margin: 20px;
+    font-size: 1.5em;
+}
