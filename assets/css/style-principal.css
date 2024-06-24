@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{margin:0;padding: 0; font-family: "Raleway";scroll-behavior: smooth;}
+
+:root{
+    --menu-color: #78100C;
+    --font-color-prim: #FFD7C3;
+    --footer-bg: #c72923;
+}     
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+/* MENU///////////////////////////////////// */
+header{
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--menu-color);
+    color: var(--font-color-prim);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+}
+header .menu{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.menu img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+header .content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    font-size: 130%;
+}
+header .content img{
+    width: 25px;
+    height: auto;
+}
+.headerContent{
+    cursor: pointer;
+}
+/* ////////////////////////////////////////////////// */
+/* PRIMEIRO_CONTAINER//////////////////////////////////////// */
+main .container-title-velas{
+    width: 100%;
+    height: 20vh;
+    background-image: url(../img/velas\ background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.primero-texto{
+    width: 100%;
+    height:  60vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    
+}
+
+.primero-texto .logo {
+    background-image: url(../img/Logo.png);
+    width: 400px;
+    height: 400px;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid black;
+    border-radius: 100%;
+}  
+.primero-texto .content #title{
+    color: var(--menu-color);
+    margin-bottom: 20px;
+    font-weight: 300;
+    height: auto;
+    font-size: 200%;
+}
+.primero-texto .content{
+    width: 35%;
+    height: auto;
+    font-size: 130%;
+    text-align: left;
+    margin: 60px;
+}
+/* /////////////////////////////////////////////////////// */
+/* CARROSSEL/////////////////////////////////////////// */
+.container-carrossel{
+    width: 100%;
+    height: 80vh;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-carrossel div{
+    width: 70vw;
+    height: 75vh;  
+    background-color: whitesmoke;
+}
+/* //////////////////////////////////////////////////////////////////////// */
+.container-beneficios{
+    width: 100%;
+    height: 80vh;
+    background-image: url(../img/velas-background-2.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-beneficios div{
+    width: 40%;
+    height: 80%;
+    margin-left: 20px;
+}
+.container-beneficios h3{
+    padding-left: 100px;
+    color: var(--menu-color);
+    width: 25%;
+    height: 80%;
+    font-size: 8vh;
+}
+
+
+.container-beneficios p{
+    margin-top: 5px;
+    color: var(--font-color-prim);
+    text-align: left;
+    font-size: 3.3vh;
+    grid-template-columns: 3fr;
+    grid-auto-flow: 2fr;
+
+}
+
+
+
+/* /////////////////////////////////////////////////////// */
+/* /////////////RODAPE//////////////////////// */
+
+footer{
+    width: 100%;
+    height: 40vh;
+    background-color: var(--menu-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    color: var(--font-color-prim);
+}
+
+footer .para-img{
+    width: 90%;
+    height: 20%;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+footer .para-img img{
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+footer .principal{
+    width: 90%;
+    height: 50%;
+    border-top: var(--font-color-prim) 2px solid;
+    border-bottom: var(--font-color-prim) 2px solid;
+    display: flex;
+    flex-direction: row;
+}
+footer .principal #text{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-left: 20px;
+    font-size: 1.2em;
+}
+
+footer .principal #rede-social{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}  
+footer .principal #rede-social p{
+    width: 40%;
+    height: auto;
+}
+footer .principal #rede-social #aaaa{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+footer .principal #rede-social #aaaa .whatsapp{
+    background-image: url(../img/whatsapp-logo.png);
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-size: contain;
+    
+}
+footer .principal #rede-social #aaaa .instagram{
+    background-image: url(../img/insta-logo.png);
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-size: contain;
+    margin-left: 10px;
+}
+footer .parte-baixa{
+    width: 90%;
+    height: 20%;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    
+}
+footer .parte-baixa section{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 70%;
+}
+footer .parte-baixa section p{
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+footer .parte-baixa #ilu{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ///////////////////////////////////////////////// */
+/* Victor fez a pratir daq:) */
+
+#inputContato{
+    height: 20vh;
+    width: 45%;
+    margin: 10px 0 10px 15px;
+    border-radius: 4px;
+    border-color: transparent;
+}
+
+
+#divConteinerCarrinho{
+    cursor: default;
+} 
+
+.buttonContato{
+    margin: 0 0 10px 15px;
+    border-radius: 4px;
+    border-color: transparent;
+    height: 5vh;
+    width: 50px;
+}
+
+.containerMenuCarrinho{
+    animation-name: animation;
+    animation-duration: 0.2s;
+
+    position: fixed;
+    margin-left: 81%;
+    margin-top: 10px;
+    
+    flex-direction: column;
+    left: 0;
+    width: 35vh;
+    background-color: white;
+    border: var(--menu-color) 2px solid;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerMenuCarrinho div{
+    height: 10vh;
+    width: 100%;
+    border-bottom: var(--menu-color) 2px solid;
+    padding-bottom: 5px;
+    display: flex;
+}
+
+.containerMenuCarrinho div img{
+    width: 40%;
+    height: 100%;
+    border-radius: 19px;
+    margin: 2px;
+}
+
+.containerMenuCarrinho div section {
+    color: var(--menu-color);
+    padding-left: 10px;
+
+    height: 100%;
+}
+
+.containerMenuCarrinho div section p{
+    color: var(--menu-color);
+    font-size: 1em;
+}
+
+.containerMenuCarrinho div section button{
+    width: 50%;
+    cursor: pointer;
+}
+
+.containerMenuCarrinho section {
+    /* background-color: pink; */
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.containerMenuCarrinho button{
+    cursor: pointer;
+}
+
+.velaProd{
+    transition: 2s;
+}
+
+
+@keyframes animation {
+    0%{
+        opacity: 0.5;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
