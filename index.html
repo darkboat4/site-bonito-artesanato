@@ -1,25 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/Logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style-principal.css">
+    <link rel="icon" href="./assets/img/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style-principal.css">
+    <link rel="stylesheet" href="./assets/css/carrossel.css">
+    <link rel="stylesheet" href="./assets/css/pagProd.css">
+    <link rel="stylesheet" href="./assets/css/pagCompra.css">
+
     <title>Ilumari</title>
 </head>
 <body>
     <header>
-        <div class="menu"><img src="img/btn menu.png"></div>
+        <div class="menu"><img src="./assets/img/btn menu.png" class="headerContent menu"></div>
         <div class="content">
-            <div href="#">Sobre nós</div>
-            <div href="#">Produtos</div>
-            <div href="#">Contato</div>
-            <div href="#"><img src="img/carrinho-icon.png" alt="carrinho"></div>
+            <div href="#" class="headerContent sobreNos">Sobre nós</div>
+            <div href="#" class="headerContent produtos">Produtos</div>
+            <div href="#" class="headerContent contato">Contato</div>
+            
+            <div href="#" class="headerContent carrinho">
+                <div id="divConteinerCarrinho" class="headerContent carrinho">
+                    <img src="./assets/img/carrinho-icon.png" alt="carrinho" class="headerContent carrinho">
+                    <div class="containerMenuCarrinho">
+                        
+                        <!-- <div>
+                            <img src="./assets/img/vela1.jfif">
+                            <section>
+                                <p>VELA CORAÇÃO s2</p>
+                                <button>Comprar</button>
+                            </section>
+                        </div>
+          
+                        <section id="headerCarrinho">
+                            <button>Comprar tudo!</button>
+                        </section> -->
+                    </div>
+                </div>
+
+            </div>
         </div>
     </header>
+
+    <div id="pagCompras" class="activeCompra">
+        <div id="contentCompras">
+            <div class="produtosQueSeraoComprados">
+
+
+                <div class="gridContenteProds">
+                    <img src="./assets/img/quadradas/1.jpeg">    
+                    <div>
+                        <h2>LOREM IPSUM DOLOR IPSUN </h2>
+                        <h3>LOREM IPSUM</h3>
+                    </div>
+                    <div class="carrinho-In-Pag-Prods vela1"> </div>
+                </div>
+
+                <div class="gridContenteProds">
+                    <img src="./assets/img/quadradas/2.jpeg">    
+                    <div>
+                        <h2>Vela lata grande c/ tampa 100G</h2>
+                        <h3>R$36.00 + FRETE</h3>
+                    </div>
+                    <div class="carrinho-In-Pag-Prods vela2"> </div>
+                </div>
+
+                <div class="gridContenteProds">
+                    <img src="./assets/img/quadradas/2.jpeg">    
+                    <div>
+                        <h2>Vela lata grande c/ tampa 100G</h2>
+                        <h3>R$36.00 + FRETE</h3>
+                    </div>
+                    <div class="carrinho-In-Pag-Prods vela2"> </div>
+                </div>
+
+                <div class="gridContenteProds">
+                    <img src="./assets/img/quadradas/2.jpeg">    
+                    <div>
+                        <h2>Vela lata grande c/ tampa 100G</h2>
+                        <h3>R$36.00 + FRETE</h3>
+                    </div>
+                    <div class="carrinho-In-Pag-Prods vela2"> </div>
+                </div>
+
+                
+            </div>
+            <div class="contentPagamento">
+                <header>
+
+                </header>
+                <main>
+
+                </main>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="catchMe">
+        <div id="contentMain">
+            <div id="headerProds" class="headerHAHA"> <h1>PRODUTOS</h1>     
+                <div id="close" onclick="closeProds()">X</div>
+            </div>
+            <div class="contentProdutos" >
+                <div class="gridContenteProds" id="prodsHIDDEN">
+                    <img src="./assets/img/quadradas/1.jpeg">    
+                    <div>
+                        <h2>LOREM IPSUM DOLOR IPSUN </h2>
+                        <h3>LOREM IPSUM</h3>
+                    </div>
+                    <div class="carrinho-In-Pag-Prods vela1"> </div>
+                </div>
+
+                <div class="gridContenteProds" id="prodsHIDDEN">
+                    <img src="./assets/img/quadradas/2.jpeg">    
+                    <div>
+                        <h2>Vela lata grande c/ tampa 100G</h2>
+                        <h3>R$36.00 + FRETE</h3>
+                    </div>
+                    <div class="carrinho-In-Pag-Prods vela2"> </div>
+                </div>
+
+                <div class="gridContenteProds" id="prodsHIDDEN">
+                    <img src="./assets/img/quadradas/3.jpeg">    
+                    <div>
+                        <h2>Vela pote Lavanda 100g</h2>
+                        <h3>R$32.00 + FRETE</h3>
+                    </div>
+                    <div class="carrinho-In-Pag-Prods vela3"> </div>
+                </div>
+
+                <div class="gridContenteProds" id="prodsHIDDEN">
+                    <img src="./assets/img/quadradas/4.jpeg">    
+                    <div>
+                        <h2>Vela lata pequena c/ tampa 50G</h2>
+                        <h3>R$36.00 + FRETE</h3>
+                    </div>
+                    <div class="carrinho-In-Pag-Prods vela4"> </div>
+                </div>
+
+                <div class="gridContenteProds" id="prodsHIDDEN">
+                    <img src="./assets/img/quadradas/5.jpeg">    
+                    <div>
+                        <h2>Vela Coruja 40G</h2>
+                        <h3>R$15.00 + FRETE</h3>
+                    </div>
+                    <div class="carrinho-In-Pag-Prods vela5"> </div>
+                </div>
+
+                <div class="gridContenteProds" id="prodsHIDDEN">
+                    <img src="./assets/img/quadradas/6.jpeg">    
+                    <div>
+                        <h2>VELA SEIS</h2>
+                        <h3>R$40.00</h3>
+                    </div>
+                    <div class="carrinho-In-Pag-Prods vela6"> </div>
+                </div>
+
+                <div class="gridContenteProds" id="prodsHIDDEN" style="border-bottom-left-radius: 39px;">
+                    <img src="./assets/img/quadradas/7.jpg">    
+                    <div>
+                        <h2>Vela Cappucino 55G</h2>
+                        <h3>R$25.00 + FRETE</h3>
+                    </div>
+                    <div class="carrinho-In-Pag-Prods vela7"> </div>
+                </div>
+
+                <div class="gridContenteProds" id="prodsHIDDEN" style="border-bottom-right-radius: 39px ;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
     <main>
-        <div style="width: 100%;height: 10vh;background-color: white;"></div>
+        <div style="height: 2vh;"></div>
         <div class="container-title-velas"></div>
         
         
@@ -31,24 +190,59 @@
             </div>
         </div>
         <div class="louca" style="width: 100%;height: 10vh;background-color: white;"></div>
-        <div class="container-carrossel"><div></div></div>
+        <div class="container-carrossel">
+            <div class="carrossel">
+                <!-- Os slides do carrossel -->
+                <div class="slide">
+                  <img src="./assets/img/horizontais/1.jpeg" class="vela1 velaProd">
+                </div>
+                <div class="slide">
+                  <img src="./assets/img/horizontais/2.jpeg" class="vela2 velaProd">
+                </div>
+                <div class="slide">
+                  <img src="./assets/img/horizontais/3.jpeg" class="vela3 velaProd">
+                </div>
+                <div class="slide">
+                    <img src="./assets/img/horizontais/4.jpeg" class="vela4 velaProd">
+                </div>
+                <div class="slide">
+                    <img src="./assets/img/horizontais/5.jpeg" class="vela5 velaProd">
+                </div>
+                <div class="slide">
+                    <img src="./assets/img/horizontais/6.jpeg" class="vela6 velaProd">
+                </div>
+                <div class="slide">
+                    <img src="./assets/img/horizontais/7.jpg" class="vela7 velaProd">
+                </div>
+                <button class="prev">Anterior</button>
+                <button class="next">Próximo</button>
+              </div>
+            </div>
+        </div>
+
+
+
         <div class="louca" style="width: 100%;height: 10vh;background-color: white;"></div>
         <div class="container-beneficios">
             <h3>Benefícios</h3>
             <div>
-            <p>As velas aromáticas fornecem por meio da aromaterapia concentração, relaxamento, aconchego, produtividade e criatividade, contando também com a atração de boas energias.</p>
-            <p>São excelentes itens decorativos e deixam um cheiro suave e agradável no ambiente, com isso é possível desbloquear uma memória olfativa, ou seja, ora associar os aromas a alguma memória ou sensação, ora criar uma nova memória por meio da fragrância.
-                Além disso, são ótimas para diversas ocasiões, como um jantar especial, meditação ou durante os estudos e até mesmo trabalho.</p>
+            <p  class="saaas">As velas aromáticas fornecem por meio da aromaterapia concentração, relaxamento, aconchego, produtividade e criatividade, contando também com a atração de boas energias. <br>
+            São excelentes itens decorativos e deixam um cheiro suave e agradável no ambiente, com isso é possível desbloquear uma memória olfativa, <br> ou seja, ora associar os aromas a alguma memória ou sensação, <br> ora criar uma nova memória por meio da fragrância. <br>
+            Além disso, são ótimas para diversas ocasiões, como um jantar especial, meditação ou durante os estudos e até mesmo trabalho.
+            </p>
             </div>
         </div>
         <div class="louca" style="width: 100%;height: 10vh;background-color: white;"></div> 
     </main>
 
-    <footer>
-        <div class="para-img"><img src="img/Logo.png" alt="logo principal"><img src="img/logo coleho.png" alt="Logo coelho"></div>
+
+    <footer id="mainFooter">
+        <div class="para-img"><img src="./assets/img/Logo.png" alt="logo principal"><img src="./assets/img/logo coleho.png" alt="Logo coelho"></div>
         <div class="principal">
         <div id="text">
             <p>Algum comentário?</p>
+                <input type="text" placeholder="Escreva para nós!" id="inputContato">
+                <button class="buttonContato" onclick="tchauBroxa()">Enviar</button>
             <p>Agradecemos seu contato!</p>
         </div>
         <div id="rede-social">
@@ -64,5 +258,9 @@
             <section><p>Privacidade</p><p>Termos e condições</p></section> <p id="ilu">@Ilumari 2024</p>
         </div>
     </footer>
+    
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/modules/carrosel.js"></script>
+    <script src="./assets/js/modules/comprar.js"></script>
 </body>
 </html>

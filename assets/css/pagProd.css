@@ -1,0 +1,143 @@
+.activeProd{
+    position: fixed;
+    width: 100%;
+    height: 101vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 20;
+
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+    transition: 0.5s;
+}
+
+
+
+.mainContentProd{
+    background-color: white;
+    height: 80vh;
+    width: 80%;
+    opacity: 1;
+    border-radius: 40px;
+    margin-top: -10vh;
+    position: fixed;
+}
+
+.headerHAHA{
+    border-top-left-radius: 38px;
+    border-top-right-radius: 38px;
+
+    height: 15%;
+    width: 100%;
+    background-color: #78100C;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 1.2s;
+
+}
+
+.headerHAHA h1{
+    font-size: 3em;
+    color: white;
+    cursor: default;
+}
+
+.headerHAHA h1:hover{
+    font-size: 3em;
+    color: white;
+    opacity: 0.8;
+}
+
+#close{
+    background-color: aliceblue;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-left: 92%;
+    position: absolute;
+    cursor: pointer;
+
+}
+
+#close:hover{
+    opacity: 0.5;
+    transition: 0.1s;
+}
+
+#contentMain .contentProdutos{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+
+    border-bottom-left-radius: 39px ;
+    border-bottom-right-radius: 39px ;
+
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+}
+
+.gridContenteProds{
+
+
+    /* background-color: aquamarine; */
+    border-bottom: black 2px solid;
+    border-right: black 2px solid;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gridContenteProds h2{
+    font-size: 3vh;
+}
+
+.gridContenteProds img{
+    height: 18vh;
+    width: 18vh;
+    padding: 5px;
+    border-radius: 40px;
+}
+
+.gridContenteProds h3{
+    color: #78100C;
+}
+
+.carrinho-In-Pag-Prods{
+    background-image: url(../img/carrinho-icon.png) ;
+    /* background-color: aqua; */
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    margin-right: 3px;
+    height: 5vh;
+    width: 5vh;
+
+    filter: invert(100%);
+
+    cursor: pointer;
+}
+
+.carrinho-In-Pag-Prods:hover{
+    opacity: 0.8;
+}
+
+.carrinho-In-Pag-Prods:active{
+    opacity: 0.5;
+}
+
+#prodsHIDDEN{
+    display: none;
+}
+
+section.sectCarrinhoAll {
+    justify-content: space-evenly;
+}
