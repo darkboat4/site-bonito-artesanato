@@ -13,46 +13,130 @@
 }
 
 .produtosQueSeraoComprados{
-    background-color: blueviolet;
     width: 60%;
     height: 100%;
+    max-height: 100%;
+    overflow-y: scroll;
 
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
 
 }
 
+.gridContenteComprs{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+        
+    height: 20%;
+    border-bottom: black 2.5px solid;
+}
+
+.gridContenteComprs img{
+    height: 15vh;
+
+    border-top-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 4px;
+}
+
+.gridContenteComprs section{
+    margin-left: 2vh;
+}
+
+.gridContenteComprs section h4{
+    color: #78100C;
+    font-size: 3vh;
+}
+
+.gridContenteComprs section p{
+    font-size: 2vh;
+}
+
 .contentPagamento{
-    background-color: blue;
     width: 40%;
     height: 100%;
 
-    border-top-right-radius: 40px;
+    border-top-right-radius: 42px;
     border-bottom-right-radius: 40px;
 
     display: block;
+    border-left: black 1.5px solid ;
 }
 
-.contentPagamento header{
-    background-color: red;
-    height: 25%;
-    width: 32%;
-    border-top-right-radius: 40px;
-}
-
-.contentPagamento main{
-    background-color: rgb(30, 255, 0);
-    height: 75%;
+.contentPagamento .divHeader{
+    background-color: var(--menu-color);
     width: 100%;
+    height: 15%;
 
-    border-top-right-radius: 40px;
+    border-top-right-radius: 39px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4vh;
 }
 
-.contentPagamento div{
-    background-color: cyan;
-    height: 25%;
+.contentPagamento .divMain{
+    height: calc(65% - 6vh);
+    width: calc(100% - 8vh);
+
+    flex-direction: column;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    padding-left: 8vh;
+    padding-top: 6vh;
+}
+
+.contentPagamento .divMain #total{
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    justify-self: start;
+}
+
+.contentPagamento .divMain section{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contentPagamento .divFooter{
+    height: 20%;
     border-bottom-right-radius: 40px;
 
+}
+
+.ifVista{
+    border: black 1.5px solid;
+}
+
+.if{
+    margin-top: 20px;
+    height: 20vh;
+    width: 90%;
+}
+
+.ifParcelado{
+    border: black 1.5px solid;
+    height: 30vh;
+}
+
+.if div{
+    width: 100%;
+    height: 12%;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 1.5vh;
+
+    margin-left: 5px;
 }
 
 #contentCompras{
@@ -66,6 +150,32 @@
     display: flex;
 }
 
+#closeComprar{
+    background-color: aliceblue;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    font-size: 1.6vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-left: 20%;
+    position: absolute;
+    cursor: pointer;
+
+}
+
+#closeComprar:hover{
+    opacity: 0.5;
+    transition: 0.1s;
+}
+
 .hidden{
+    display: none;
+}
+
+#hidden{
     display: none;
 }

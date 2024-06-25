@@ -43,57 +43,73 @@
         </div>
     </header>
 
-    <div id="pagCompras" class="activeCompra">
+<!-- class activeCompra caso queira q esteja ativo a pag de comprar -->
+<!-- class hidden caso queira q esteja inativo a pag de comprar -->
+
+    <div id="pagCompras" class="hidden">
         <div id="contentCompras">
             <div class="produtosQueSeraoComprados">
 
 
-                <div class="gridContenteProds">
+                <!-- <div class="gridContenteComprs">
                     <img src="./assets/img/quadradas/1.jpeg">    
                     <div>
                         <h2>LOREM IPSUM DOLOR IPSUN </h2>
                         <h3>LOREM IPSUM</h3>
                     </div>
-                    <div class="carrinho-In-Pag-Prods vela1"> </div>
-                </div>
-
-                <div class="gridContenteProds">
-                    <img src="./assets/img/quadradas/2.jpeg">    
-                    <div>
-                        <h2>Vela lata grande c/ tampa 100G</h2>
-                        <h3>R$36.00 + FRETE</h3>
-                    </div>
-                    <div class="carrinho-In-Pag-Prods vela2"> </div>
-                </div>
-
-                <div class="gridContenteProds">
-                    <img src="./assets/img/quadradas/2.jpeg">    
-                    <div>
-                        <h2>Vela lata grande c/ tampa 100G</h2>
-                        <h3>R$36.00 + FRETE</h3>
-                    </div>
-                    <div class="carrinho-In-Pag-Prods vela2"> </div>
-                </div>
-
-                <div class="gridContenteProds">
-                    <img src="./assets/img/quadradas/2.jpeg">    
-                    <div>
-                        <h2>Vela lata grande c/ tampa 100G</h2>
-                        <h3>R$36.00 + FRETE</h3>
-                    </div>
-                    <div class="carrinho-In-Pag-Prods vela2"> </div>
-                </div>
+                </div> -->
 
                 
             </div>
             <div class="contentPagamento">
-                <header>
+                <div class="divHeader">
+                    <h1>Comprar</h1>
+                    <div id="closeComprar" onclick="closeComprs()">X</div>
+                </div>
+                <div class="divMain">
+                    <section>
+                        Qual a forma de pagamento?
+                        <select id="swichPagamento">
+                            <option value="0"></option>
+                            <option value="1">À vista</option>
+                            <option value="2">Á prazo</option>
+                        </select>
+                        <button class="confirm">Confirmar</button>
+                    </section>
 
-                </header>
-                <main>
+                    <div id="total">Total: </div>
 
-                </main>
-                <div>
+                    <div class="ifVista if" id="hidden">
+                        <div>Pagando a vista você ganha um desconto de 5%!</div>
+                        <div>O total a ser pago com desconto é:</div>
+                        <div id="totalWithVista"></div>
+                        <div><button onclick="compraConfirmada()">Comprar</button></div>
+                    </div>
+
+                    <div class="ifParcelado if" id="hidden">
+                        <div>Pagando a prazo você pode parcelar em até 3x!</div>
+                        <div>
+                            Deseja Parcelar em quantas vezes?
+                            <select class="swichValParcela" style="margin-left: 10px;">
+                                <option value="null"></option>
+                                <option value="2">2x</option>
+                                <option value="3">3x</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button class="confirmParcela">Confirmar Parcela</button>
+                        </div>
+                        <div>Cada parcela saíra:</div>
+                        <div id="parcelaValue"></div>
+
+                        <div>O total a ser pago é:</div>
+                        <div id="totalWithParcela"></div>
+
+                        <div><button onclick="compraConfirmada()">Comprar</button></div>
+                    </div>
+
+                </div>
+                <div class="divFooter">
 
                 </div>
             </div>
@@ -137,7 +153,7 @@
                     <img src="./assets/img/quadradas/4.jpeg">    
                     <div>
                         <h2>Vela lata pequena c/ tampa 50G</h2>
-                        <h3>R$36.00 + FRETE</h3>
+                        <h3>R$30.00 + FRETE</h3>
                     </div>
                     <div class="carrinho-In-Pag-Prods vela4"> </div>
                 </div>
@@ -154,8 +170,8 @@
                 <div class="gridContenteProds" id="prodsHIDDEN">
                     <img src="./assets/img/quadradas/6.jpeg">    
                     <div>
-                        <h2>VELA SEIS</h2>
-                        <h3>R$40.00</h3>
+                        <h2>Vela taça 100G</h2>
+                        <h3>R$40.00 + FRETE</h3>
                     </div>
                     <div class="carrinho-In-Pag-Prods vela6"> </div>
                 </div>
@@ -242,7 +258,7 @@
         <div id="text">
             <p>Algum comentário?</p>
                 <input type="text" placeholder="Escreva para nós!" id="inputContato">
-                <button class="buttonContato" onclick="tchauBroxa()">Enviar</button>
+                <button class="buttonContato" onclick="apagaInput()">Enviar</button>
             <p>Agradecemos seu contato!</p>
         </div>
         <div id="rede-social">

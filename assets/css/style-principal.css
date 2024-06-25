@@ -47,6 +47,11 @@ header .content img{
     width: 25px;
     height: auto;
 }
+
+.carrinho{
+    transition: 0.5s;
+}
+
 .headerContent{
     cursor: pointer;
 }
@@ -101,7 +106,7 @@ main .container-title-velas{
 .container-carrossel{
     width: 100%;
     height: 80vh;
-    background-color: gray;
+    background-color: var(--menu-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -305,6 +310,9 @@ footer .parte-baixa #ilu{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    max-height: 70%;
+    overflow-y: scroll;
 }
 
 .containerMenuCarrinho div{
@@ -354,6 +362,13 @@ footer .parte-baixa #ilu{
 
 .velaProd{
     transition: 2s;
+}
+
+.produtoInCarrinho section{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 2vh;
 }
 
 

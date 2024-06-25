@@ -10,7 +10,7 @@ const bode = document.querySelector('body');
 
 let divContente = document.querySelector('#catchMe');
 let i = 0;
-let trueOrFalse = 1;
+let trueOrFalse = 2;
 // Captura todo evento de clique dos objetos que estao na HEADER fixada:
 
 header.addEventListener('click', (e) => {
@@ -31,18 +31,28 @@ header.addEventListener('click', (e) => {
 
 
     if(element.classList.contains('carrinho')) { 
-        trueOrFalse++;
-        const carrinhoMenu = document.querySelector('.containerMenuCarrinho');
-        let allProdsinCarrinho = carrinhoMenu.querySelectorAll('.produtoInCarrinho');
+        trueOrFalse++
 
         if(trueOrFalse % 2 === 0){
-            alert('true')
+            let allComprs = document.querySelector('.containerMenuCarrinho').querySelectorAll('.produtoInCarrinho')
+            for(let i of allComprs){
+                i.removeAttribute('id')
+            }
+
+            efeitoCarrinhoAbrir();    
+            openCloseFooterMenu(true, false);
         }
         else{
-            alert('false')
-        }
+           
 
-        console.log(allProdsinCarrinho)
+            let allComprs = document.querySelector('.containerMenuCarrinho').querySelectorAll('.produtoInCarrinho')
+            for(let i of allComprs){
+                i.setAttribute('id', 'hidden')
+            }
+
+            efeitoCarrinhoFechar();
+            openCloseFooterMenu(false, true);
+        }
     } 
     
 });
@@ -69,6 +79,7 @@ function openProds(){
     let contentMain = document.querySelector('#contentMain');
     contentMain.setAttribute('class', 'mainContentProd')
 
+
     bode.style.overflowY = 'hidden';
 }
 
@@ -76,40 +87,39 @@ function openProds(){
 
 document.addEventListener('click', (e) => {
     let element = e.target;
-    console.log(element)
 
     if(element.classList.contains('vela1')){
-        let vela = spawnDiv('./assets/img/quadradas/1.jpeg', 'VELA 1');
+        let vela = spawnDiv('./assets/img/quadradas/1.jpeg', 'VELA 1', 'R$15.00', 15);
         adcOnCarrinho(vela)
     }
 
     if(element.classList.contains('vela2')){
-        let vela = spawnDiv('./assets/img/quadradas/2.jpeg', 'VELA 2');
+        let vela = spawnDiv('./assets/img/quadradas/2.jpeg', 'Vela lata grande', 'R$36.00', 36);
         adcOnCarrinho(vela)
     }
 
     if(element.classList.contains('vela3')){
-        let vela = spawnDiv('./assets/img/quadradas/3.jpeg', 'VELA 3');
+        let vela = spawnDiv('./assets/img/quadradas/3.jpeg', 'Vela pote Lavanda', 'R$32.00', 32);
         adcOnCarrinho(vela)
     }
 
     if(element.classList.contains('vela4')){
-        let vela = spawnDiv('./assets/img/quadradas/4.jpeg', 'VELA 4');
+        let vela = spawnDiv('./assets/img/quadradas/4.jpeg', 'Vela lata pequena', 'R$30.00', 30);
         adcOnCarrinho(vela)
     }
 
     if(element.classList.contains('vela5')){
-        let vela = spawnDiv('./assets/img/quadradas/5.jpeg', 'VELA 5');
+        let vela = spawnDiv('./assets/img/quadradas/5.jpeg', 'Vela Coruja', 'R$15.00', 15);
         adcOnCarrinho(vela)
     }
 
     if(element.classList.contains('vela6')){
-        let vela = spawnDiv('./assets/img/quadradas/6.jpeg', 'VELA 6');
+        let vela = spawnDiv('./assets/img/quadradas/6.jpeg', 'Vela taça', 'R$40.00', 40);
         adcOnCarrinho(vela)
     }
 
     if(element.classList.contains('vela7')){
-        let vela = spawnDiv('./assets/img/quadradas/7.jpg', 'VELA 7');
+        let vela = spawnDiv('./assets/img/quadradas/7.jpg', 'Vela Cappucino', 'R$25.00', 25);
         adcOnCarrinho(vela)
     }
 
@@ -118,7 +128,8 @@ document.addEventListener('click', (e) => {
 
 function adcOnCarrinho(arg){
     arg.setAttribute('class', 'produtoInCarrinho');
-    document.querySelector('.containerMenuCarrinho').insertAdjacentElement('afterbegin', arg)
+    document.querySelector('.containerMenuCarrinho').insertAdjacentElement('afterbegin', arg);
+    efeitoCarrinhoAbrir();   
 
     //para o footer de "Comprar tudo" nao se repita ao adicionar um novo item no carrinho:
     if(i === 0){
@@ -130,16 +141,22 @@ function adcOnCarrinho(arg){
     }
 }
 
-function spawnDiv(img, p){
+function spawnDiv(img, p, precoString, precoValueReal){
     let novaDiv = document.createElement('div');
-        let novaImg = document.createElement('img');
-        novaImg.setAttribute('src', img);
-        let sect = document.createElement('section');
-        let novoP = document.createElement('p');
-        novoP.innerText = p;
-        novaDiv.appendChild(novaImg);
-        sect.appendChild(novoP);
-        novaDiv.appendChild(sect)
+    let novaImg = document.createElement('img');
+    novaImg.setAttribute('src', img);
+    let sect = document.createElement('section');
+    let novoP = document.createElement('h4');
+    let preco = document.createElement('p')
+    
+    preco.innerText = precoString;
+    novoP.innerText = p;
+
+    novaDiv.appendChild(novaImg);
+    novaDiv.setAttribute('value', precoValueReal)
+    sect.appendChild(novoP);
+    sect.appendChild(preco);
+    novaDiv.appendChild(sect);
     return novaDiv;
 }
 
@@ -163,4 +180,33 @@ function criaFooterMenu() {
 
 const criaBtn = () => bt = document.createElement('button');
 
-const tchauBroxa = () => document.querySelector('#inputContato').value = null;
+const apagaInput = () => document.querySelector('#inputContato').value = null;
+
+function openCloseFooterMenu(abrir, fechar){
+    if(abrir){
+        document.querySelector('.sectCarrinhoAll').removeAttribute('id')
+    }
+    if(fechar){
+        document.querySelector('.sectCarrinhoAll').setAttribute('id', 'hidden')
+    }
+}
+
+// -------------------------------------------------styles
+
+function efeitoCarrinhoAbrir(){
+    let carrinhoStyleWJS = document.querySelector('.carrinho');
+
+    carrinhoStyleWJS.style.backgroundColor = '#c72923';
+    carrinhoStyleWJS.style.borderRadius = '10px';
+    carrinhoStyleWJS.style.padding = '10px';
+    carrinhoStyleWJS.style.transition = '0.5';
+}
+
+function efeitoCarrinhoFechar(){
+    let carrinhoStyleWJS = document.querySelector('.carrinho');
+
+    carrinhoStyleWJS.style.backgroundColor = '#78100C';
+    carrinhoStyleWJS.style.borderRadius = '0px';
+    carrinhoStyleWJS.style.padding = '0px';
+    carrinhoStyleWJS.style.transition = '0.5';
+}
