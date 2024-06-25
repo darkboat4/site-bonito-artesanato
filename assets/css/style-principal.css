@@ -259,6 +259,7 @@ footer .parte-baixa section p{
     align-items: center;
     justify-content: center;
     width: 40%;
+    font-size: 1.0em;
 }
 footer .parte-baixa #ilu{
     width: 20%;
@@ -272,9 +273,8 @@ footer .parte-baixa #ilu{
 /* Victor fez a pratir daq:) */
 
 #inputContato{
-    height: 20vh;
-    width: 45%;
-    margin: 10px 0 10px 15px;
+    size: 30;
+    height: fit-content;
     border-radius: 4px;
     border-color: transparent;
 }
@@ -285,11 +285,17 @@ footer .parte-baixa #ilu{
 } 
 
 .buttonContato{
-    margin: 0 0 10px 15px;
     border-radius: 4px;
     border-color: transparent;
-    height: 5vh;
+    height: fit-content;
     width: 50px;
+    color: black;
+}
+.buttonContato:hover{
+    padding: 1px;
+    border: 1px solid black;
+    transform: .1s ease;
+    cursor: pointer;
 }
 
 .containerMenuCarrinho{
