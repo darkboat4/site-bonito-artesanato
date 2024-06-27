@@ -106,7 +106,7 @@ main .container-title-velas{
 .container-carrossel{
     width: 100%;
     height: 80vh;
-    background-color: var(--menu-color);
+    background-color: gray;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -243,7 +243,7 @@ footer .parte-baixa{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.9vh;
     
 }
 footer .parte-baixa section{
@@ -259,7 +259,7 @@ footer .parte-baixa section p{
     align-items: center;
     justify-content: center;
     width: 40%;
-    font-size: 1.0em;
+    font-size: 1em;
 }
 footer .parte-baixa #ilu{
     width: 20%;
@@ -273,8 +273,9 @@ footer .parte-baixa #ilu{
 /* Victor fez a pratir daq:) */
 
 #inputContato{
-    size: 30;
-    height: fit-content;
+    height: 20vh;
+    width: 45%;
+    margin: 10px 0 10px 15px;
     border-radius: 4px;
     border-color: transparent;
 }
@@ -285,17 +286,11 @@ footer .parte-baixa #ilu{
 } 
 
 .buttonContato{
+    margin: 0 0 10px 15px;
     border-radius: 4px;
     border-color: transparent;
-    height: fit-content;
+    height: 5vh;
     width: 50px;
-    color: black;
-}
-.buttonContato:hover{
-    padding: 1px;
-    border: 1px solid black;
-    transform: .1s ease;
-    cursor: pointer;
 }
 
 .containerMenuCarrinho{
@@ -387,3 +382,46 @@ footer .parte-baixa #ilu{
         opacity: 1;
     }
 }
+
+.botozinholeft {
+    background-image: linear-gradient(145deg, #78100C, #c72923);
+    border-radius: 10px;
+    /* border: 2px solid rgb(63, 32, 11); */
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.5);
+
+    border-color: white;
+
+}
+
+
+.botozinhoright {
+    background-image: linear-gradient(145deg, #78100C, #c72923);
+    border-radius: 10px;
+    /* border: 2px solid rgb(63, 32, 11); */
+    width: 40px;
+    height: 40px;
+    border-color: white;
+    box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.5);
+
+
+}
+
+.bt{
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5vh;
+}
+
+.bt:hover{
+    opacity: 0.7;
+}
+
+.bt:active{
+    opacity: 0.4;
+}
+
+/* --menu-color: #78100C;
+--font-color-prim: #FFD7C3;
+--footer-bg: #c72923; */

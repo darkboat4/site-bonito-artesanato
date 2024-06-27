@@ -89,7 +89,7 @@ document.addEventListener('click', (e) => {
     let element = e.target;
 
     if(element.classList.contains('vela1')){
-        let vela = spawnDiv('./assets/img/quadradas/1.jpeg', 'VELA 1', 'R$15.00', 15);
+        let vela = spawnDiv('./assets/img/quadradas/flor.jpeg', 'Vela flor', 'R$17.00', 17);
         adcOnCarrinho(vela)
     }
 
